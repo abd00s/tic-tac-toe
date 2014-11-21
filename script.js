@@ -7,7 +7,7 @@ $(document).ready(function(){
   var turn = 0;
   $('td').on("click", function(){
     if (turn % 2 == 0) {
-      var $self = $(this)
+      var $self = $(this);
       $self.text('X');
       pOneSelections.push(parseInt($self.attr('id')));
       if (pOneSelections.length >= 3){
@@ -17,13 +17,14 @@ $(document).ready(function(){
         if (pOneSelections.length == 3){
           var total = 0;
           for (var i = 0; i < pOneSelections.length; i++) {
-            total += pOneSelections[i] << 0;
+            // console.log(total);
             if (total == 15){
               alert("P1 wins");
             }else{
               $('h2').text("Player Two GO!");
             }
           }
+            total += pOneSelections[i] << 0; // Observe!
 
         // Winning on fourth selection  
         
@@ -75,13 +76,13 @@ $(document).ready(function(){
       if (pTwoSelections.length == 3){
         var total = 0;
         for (var i = 0; i < pTwoSelections.length; i++) {
-          total += pTwoSelections[i] << 0;
           if (total == 15){
             alert("P2 wins");
           }else{
             $('h2').text("Player One GO!");
           }
         }        
+        total += pTwoSelections[i] << 0; // Observe!
       }else{
         if (pTwoSelections[0] + pTwoSelections[1] + pTwoSelections[3] == 15) {
           alert("P2 wins");
@@ -99,17 +100,5 @@ $(document).ready(function(){
   }
   turn++; 
   $(this).off("click")
-
-    // Toggle Player [One/Two] GO
-
-    // $('h2').toggleClass('turn');
-    // $(document).on('click', 'td', function(){
-    //   $('.turn').text('Player Two GO!')
-    //   });
-
-    // Capture which cell is clicked
-
-    
-
-  });
+});
 });
