@@ -11,7 +11,7 @@ $(document).ready(function(){
       $self.text('X');
       pOneSelections.push(parseInt($self.attr('id')));
       if (pOneSelections.length >= 3){
-        
+
         // Winning through first 3 selections
 
         if (pOneSelections.length == 3){
@@ -24,56 +24,69 @@ $(document).ready(function(){
               $('h2').text("Player Two GO!");
             }
           }
-        
+
         // Winning on fourth selection  
         
-        }else if (pOneSelections.length == 4){
+      }else if (pOneSelections.length == 4){
 
-            if (pOneSelections[0] + pOneSelections[1] + pOneSelections[3] == 15) {
-              alert("P1 wins");
+        if (pOneSelections[0] + pOneSelections[1] + pOneSelections[3] == 15) {
+          alert("P1 wins");
 
-            }else if (pOneSelections[0] + pOneSelections[2] + pOneSelections[3] == 15) {
-              alert("P1 wins");
+        }else if (pOneSelections[0] + pOneSelections[2] + pOneSelections[3] == 15) {
+          alert("P1 wins");
 
-            }else if (pOneSelections[1] + pOneSelections[2] + pOneSelections[3] == 15) {
-              alert("P1 wins");
-            }else{
-              $('h2').text("Player Two GO!");
-            }
+        }else if (pOneSelections[1] + pOneSelections[2] + pOneSelections[3] == 15) {
+          alert("P1 wins");
+        }else{
+          $('h2').text("Player Two GO!");
+        }
         
         // Winning on 5th selection
 
-        }else{
-
-          if (pOneSelections[0] + pOneSelections[3] + pOneSelections[4] == 15){
-            alert("P1 wins");
-
-          }else if(pOneSelections[1] + pOneSelections[3] + pOneSelections[4] == 15){
-            alert("P1 wins");
-
-          }else if (pOneSelections[2] + pOneSelections[3] + pOneSelections[4] == 15){
-            alert("P1 wins");
-
-          }else if(pOneSelections[0] + pOneSelections[1] + pOneSelections[4] == 15){
-            alert("P1 wins");
-
-          }else if(pOneSelections[0] + pOneSelections[2] + pOneSelections[4] == 15){
-            alert("P1 wins");
-          }
-        }
-
-
       }else{
-        $('h2').text("Player Two GO!");
+
+        if (pOneSelections[0] + pOneSelections[3] + pOneSelections[4] == 15){
+          alert("P1 wins");
+
+        }else if(pOneSelections[1] + pOneSelections[3] + pOneSelections[4] == 15){
+          alert("P1 wins");
+
+        }else if (pOneSelections[2] + pOneSelections[3] + pOneSelections[4] == 15){
+          alert("P1 wins");
+
+        }else if(pOneSelections[0] + pOneSelections[1] + pOneSelections[4] == 15){
+          alert("P1 wins");
+
+        }else if(pOneSelections[0] + pOneSelections[2] + pOneSelections[4] == 15){
+          alert("P1 wins");
+        }
       }
+
+
     }else{
-      var $self = $(this)
-      $self.text('O');
-      pTwoSelections.push(parseInt($self.attr('id')));
-      $('h2').text("Player One GO!");
+      $('h2').text("Player Two GO!");
     }
-    turn++; 
-    $(this).off("click")
+  }else{
+    var $self = $(this)
+    $self.text('O');
+    pTwoSelections.push(parseInt($self.attr('id')));
+    $('h2').text("Player One GO!");
+    if (pTwoSelections.length >= 3){
+      if (pTwoSelections.length == 3){
+        var total = 0;
+        for (var i = 0; i < pTwoSelections.length; i++) {
+          total += pTwoSelections[i] << 0;
+          if (total == 15){
+            alert("P2 wins");
+          }else{
+            $('h2').text("Player One GO!");
+          }
+        }        
+      }
+    }
+  }
+  turn++; 
+  $(this).off("click")
 
     // Toggle Player [One/Two] GO
 
