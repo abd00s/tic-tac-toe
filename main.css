@@ -14,50 +14,50 @@ td {
   font-size: 120px;
 }
 
-#one {
+[id="1"] {
   border-right:5px solid; 
   border-bottom: 5px solid; 
 }
 
-#two {
+[id="2"] {
   border-bottom: 5px solid;
   border-right: 5px solid;
   border-left: 5px solid;
 }
 
-#three {
+[id="3"] {
   border-left: 5px solid;
   border-bottom: 5px solid;
 }
 
-#four {
+[id="4"] {
  border-right: 5px solid;
  border-top: 5px solid;
  border-bottom: 5px solid;
 }
 
-#five {
+[id="5"] {
   border: 5px solid;
 }
 
-#six {
+[id="6"] {
  border-bottom: 5px solid;
  border-top: 5px solid;
  border-left: 5px solid;
 }
 
-#seven {
+[id="7"] {
  border-top: 5px solid;
  border-right: 5px solid;
 }
 
-#eight {
+[id="8"] {
   border-top: 5px solid;
   border-right: 5px solid;
   border-left: 5px solid;
 }
 
-#nine {
+[id="9"] {
  border-top: 5px solid;
  border-left: 5px solid; 
 }

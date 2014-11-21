@@ -9,11 +9,11 @@ $(document).ready(function(){
     if (turn % 2 == 0) {
       var $self = $(this)
       $self.text('X');
-      pOneSelections.push($self.attr('id'))
+      pOneSelections.push(parseInt($self.attr('id')));
     }else{
       var $self = $(this)
       $self.text('O');
-      pTwoSelections.push($self.attr('id'))
+      pTwoSelections.push(parseInt($self.attr('id')));
     }
     turn++; 
     $(this).off("click")
