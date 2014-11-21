@@ -1,15 +1,33 @@
 $(document).ready(function(){
-  
+
   // Add marker to clicked position; alternate X's and O's
 
-  var turn = 1;
+  pOneSelections = [];
+  pTwoSelections = [];
+  var turn = 0;
   $('td').on("click", function(){
     if (turn % 2 == 0) {
-      $(this).text('O');
+      var $self = $(this)
+      $self.text('X');
+      pOneSelections.push($self.attr('id'))
     }else{
-      $(this).text('X');
+      var $self = $(this)
+      $self.text('O');
+      pTwoSelections.push($self.attr('id'))
     }
     turn++; 
     $(this).off("click")
+
+    // Toggle Player [One/Two] GO
+
+    // $('h2').toggleClass('turn');
+    // $(document).on('click', 'td', function(){
+    //   $('.turn').text('Player Two GO!')
+    //   });
+
+    // Capture which cell is clicked
+
+    
+
   });
 });
