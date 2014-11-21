@@ -28,7 +28,18 @@ $(document).ready(function(){
         // Winning on fourth selection  
         
         }else if (pOneSelections.length == 4){
-            
+
+            if (pOneSelections[0] + pOneSelections[1] + pOneSelections[3] == 15) {
+              alert("P1 wins");
+
+            }else if (pOneSelections[0] + pOneSelections[2] + pOneSelections[3] == 15) {
+              alert("P1 wins");
+
+            }else if (pOneSelections[1] + pOneSelections[2] + pOneSelections[3] == 15) {
+              alert("P1 wins");
+            }else{
+              $('h2').text("Player Two GO!");
+            }
         }
 
 
