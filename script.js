@@ -10,6 +10,7 @@ $(document).ready(function(){
       var $self = $(this)
       $self.text('X');
       pOneSelections.push(parseInt($self.attr('id')));
+      $('h2').text("Player Two GO!");
       // var total = 0;
       // for (var i = 0; i < pOneSelections.length; i++) {
       //   total += pOneSelections[i] << 0;
@@ -21,6 +22,7 @@ $(document).ready(function(){
       var $self = $(this)
       $self.text('O');
       pTwoSelections.push(parseInt($self.attr('id')));
+      $('h2').text("Player One GO!");
     }
     turn++; 
     $(this).off("click")
