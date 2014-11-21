@@ -82,6 +82,18 @@ $(document).ready(function(){
             $('h2').text("Player One GO!");
           }
         }        
+      }else{
+        if (pTwoSelections[0] + pTwoSelections[1] + pTwoSelections[3] == 15) {
+          alert("P2 wins");
+
+        }else if (pTwoSelections[0] + pTwoSelections[2] + pTwoSelections[3] == 15) {
+          alert("P2 wins");
+
+        }else if (pTwoSelections[1] + pTwoSelections[2] + pTwoSelections[3] == 15) {
+          alert("P2 wins");
+        }else{
+          $('h2').text("Player Two GO!");
+        } 
       }
     }
   }
