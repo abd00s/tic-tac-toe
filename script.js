@@ -40,6 +40,26 @@ $(document).ready(function(){
             }else{
               $('h2').text("Player Two GO!");
             }
+        
+        // Winning on 5th selection
+
+        }else{
+
+          if (pOneSelections[0] + pOneSelections[3] + pOneSelections[4] == 15){
+            alert("P1 wins");
+
+          }else if(pOneSelections[1] + pOneSelections[3] + pOneSelections[4] == 15){
+            alert("P1 wins");
+
+          }else if (pOneSelections[2] + pOneSelections[3] + pOneSelections[4] == 15){
+            alert("P1 wins");
+
+          }else if(pOneSelections[0] + pOneSelections[1] + pOneSelections[4] == 15){
+            alert("P1 wins");
+
+          }else if(pOneSelections[0] + pOneSelections[2] + pOneSelections[4] == 15){
+            alert("P1 wins");
+          }
         }
 
 
