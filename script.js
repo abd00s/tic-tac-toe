@@ -10,6 +10,13 @@ $(document).ready(function(){
       var $self = $(this)
       $self.text('X');
       pOneSelections.push(parseInt($self.attr('id')));
+      // var total = 0;
+      // for (var i = 0; i < pOneSelections.length; i++) {
+      //   total += pOneSelections[i] << 0;
+      //   if (total == 15){
+      //     alert("P1 wins");
+      //   }
+      // }
     }else{
       var $self = $(this)
       $self.text('O');
