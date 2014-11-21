@@ -10,14 +10,31 @@ $(document).ready(function(){
       var $self = $(this)
       $self.text('X');
       pOneSelections.push(parseInt($self.attr('id')));
-      $('h2').text("Player Two GO!");
-      // var total = 0;
-      // for (var i = 0; i < pOneSelections.length; i++) {
-      //   total += pOneSelections[i] << 0;
-      //   if (total == 15){
-      //     alert("P1 wins");
-      //   }
-      // }
+      if (pOneSelections.length >= 3){
+        
+        // Winning through first 3 selections
+
+        if (pOneSelections.length == 3){
+          var total = 0;
+          for (var i = 0; i < pOneSelections.length; i++) {
+            total += pOneSelections[i] << 0;
+            if (total == 15){
+              alert("P1 wins");
+            }else{
+              $('h2').text("Player Two GO!");
+            }
+          }
+        
+        // Winning on fourth selection  
+        
+        }else if (pOneSelections.length == 4){
+            
+        }
+
+
+      }else{
+        $('h2').text("Player Two GO!");
+      }
     }else{
       var $self = $(this)
       $self.text('O');

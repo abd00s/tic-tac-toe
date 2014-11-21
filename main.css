@@ -14,23 +14,23 @@ td {
   font-size: 120px;
 }
 
-[id="1"] {
+[id="2"] {
   border-right:5px solid; 
   border-bottom: 5px solid; 
 }
 
-[id="2"] {
+[id="7"] {
   border-bottom: 5px solid;
   border-right: 5px solid;
   border-left: 5px solid;
 }
 
-[id="3"] {
+[id="6"] {
   border-left: 5px solid;
   border-bottom: 5px solid;
 }
 
-[id="4"] {
+[id="9"] {
  border-right: 5px solid;
  border-top: 5px solid;
  border-bottom: 5px solid;
@@ -40,24 +40,24 @@ td {
   border: 5px solid;
 }
 
-[id="6"] {
+[id="1"] {
  border-bottom: 5px solid;
  border-top: 5px solid;
  border-left: 5px solid;
 }
 
-[id="7"] {
+[id="4"] {
  border-top: 5px solid;
  border-right: 5px solid;
 }
 
-[id="8"] {
+[id="3"] {
   border-top: 5px solid;
   border-right: 5px solid;
   border-left: 5px solid;
 }
 
-[id="9"] {
+[id="8"] {
  border-top: 5px solid;
  border-left: 5px solid; 
 }
